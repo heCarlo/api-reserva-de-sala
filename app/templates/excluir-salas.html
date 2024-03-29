@@ -1,0 +1,17 @@
+<!-- Template para excluir uma sala existente -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Sala</title>
+</head>
+<body>
+    <h1>Excluir Sala de Aula</h1>
+    <p>Tem certeza que deseja excluir a sala "{{ sala_nome }}"?</p>
+    <form action="/api/salas/{{ sala_id }}/excluir/" method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, Excluir</button>
+    </form>
+</body>
+</html>
